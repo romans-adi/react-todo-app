@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.scss';
 import Todo from './Todo/Todo';
+import Navbar from './Navbar/Navbar';
 
 function App() {
   return (
-    <div>
+    <>
+    <>
+      <Navbar />
+      </>
+      <div className='wrapper'>
       <Todo />
     </div>
+    </>
   );
 }
 

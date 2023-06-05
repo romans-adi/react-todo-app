@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from '../TodoForm/TodoForm';
-import TodoList from '../TodoList';
+import TodoList from '../TodoList/TodoList';
 import './todo.scss';
 
 function Todo() {
   const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: 'Setup development environment',
-      completed: true,
-    },
-    {
-      id: 2,
-      text: 'Develop website and add content',
-      completed: false,
-    },
-    {
-      id: 3,
-      text: 'Deploy to live server',
-      completed: false,
-    },
+    {id: 1,
+    text: 'Do something crazy',
+    completed: false,}
   ]);
+
+  useEffect(() => {
+    const storedTodos = localStorage.getItem('todos');
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (text) => {
     const newTodo = {
@@ -52,7 +51,7 @@ function Todo() {
     <div className="containter">
       <h1>Todo List</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList classList="todo-list" todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} setTodos={setTodos}/>
     </div>
   );
 }
