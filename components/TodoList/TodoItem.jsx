@@ -32,7 +32,7 @@ const TodoItem = ({
 
   const handleCancel = () => {
     setIsEditing(false);
-    setNewText(todo.text); // Revert the edited text back to the original todo text
+    setNewText(todo.text);
   };
 
   const handleChange = (event) => {
@@ -42,6 +42,7 @@ const TodoItem = ({
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       toggleTodo(todo.id, newText);
+      handleSave();
       setIsEditing(false);
     }
   };
