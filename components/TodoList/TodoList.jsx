@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TodoItem from './TodoItem';
 import './todoList.scss';
 
@@ -15,7 +15,7 @@ function TodoList({ todos, toggleTodo, deleteTodo, setTodos }) {
   };
 
   return (
-    <ul>
+    <ul className='todo-list'>
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}

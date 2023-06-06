@@ -48,7 +48,7 @@ function Todo() {
   };
 
   return (
-    <div className="containter">
+    <div className="container">
       <h1>Todo List</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList classList="todo-list" todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} setTodos={setTodos}/>

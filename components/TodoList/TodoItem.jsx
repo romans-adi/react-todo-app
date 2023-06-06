@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import './todoList.scss';
+import { FaEdit, FaTrash, FaTimes } from 'react-icons/fa';
+import { MdSave } from 'react-icons/md';
 
 const TodoItem = ({ todo, toggleTodo, deleteTodo, saveTodoText }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -23,7 +26,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, saveTodoText }) => {
 
   const handleCancel = () => {
     setIsEditing(false);
-    setNewText(todo.text);
+    setNewText(todo.text); // Revert the edited text back to the original todo text
   };
 
   const handleChange = (event) => {
@@ -42,29 +45,38 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, saveTodoText }) => {
       {isEditing ? (
         <div>
           <input
+            className="edit-input"
             type="text"
             value={newText}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
           />
-          <button onClick={handleSave}>Save</button>
-          <button onClick={handleCancel}>Cancel</button>
+          <button className="save-btn" onClick={handleSave}>
+            <MdSave />
+          </button>
+          <button className="cancel-btn" onClick={handleCancel}>
+            <FaTimes />
+          </button>
         </div>
       ) : (
         <div>
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={handleToggle}
-          />
-          <span
-            onClick={handleToggle}
-            className={todo.completed ? 'completed' : ''}
-          >
+          <label className="checkbox-container">
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={handleToggle}
+            />
+            <span className="checkmark"></span>
+          </label>
+          <div className={todo.completed ? 'todo-text completed' : 'todo-text'}>
             {todo.text}
-          </span>
-          <button onClick={handleEdit}>Edit</button>
-          <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleEdit}>
+              <FaEdit />
+            </button>
+            <button onClick={handleDelete}>
+              <FaTrash />
+            </button>
+          </div>
         </div>
       )}
     </li>

@@ -4,6 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: #fff;
+  }
 }
 
 body {
@@ -14,8 +22,18 @@ body {
   font-size: 2rem;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+    top: 25%;
+}
+
 #root {
   display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
 }
