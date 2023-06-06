@@ -1,0 +1,133 @@
+@import '../mixins';
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.todo-list > li > div {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & > .todo-text {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #ffffff59;
+    padding: 10px 20px;
+    width: 100%;
+    flex-grow: 1; // Allow the text to grow and take up available space
+    white-space: nowrap; // Prevent the text from wrapping to the next line
+    overflow: hidden; // Hide any overflowing text
+    text-overflow: ellipsis;
+    grid-template-columns: 1fr auto auto;
+
+    & button {
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #fff;
+      margin-left: 8px;
+    }
+
+    &.completed {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container .checkmark::after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.edit-input {
+  /* stylelint-disable at-rule-no-unknown */
+  @include input;
+
+  width: 100%;
+}
+
+.save-btn {
+  right: 30px;
+}
+
+.cancel-btn {
+  right: 5px;
+}
+
+.save-btn,
+.cancel-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: none;
+  border-radius: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: seagreen;
+  font-size: 18px;
+  margin-left: 10px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

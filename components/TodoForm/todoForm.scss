@@ -1,0 +1,18 @@
+@import '../mixins';
+
+.todo-form {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  max-width: max-content;
+
+  .add-input {
+    /* stylelint-disable at-rule-no-unknown */
+    @include input;
+  }
+
+  .add-btn {
+    @include icon-btn;
+  }
+}

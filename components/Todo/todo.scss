@@ -1,0 +1,11 @@
+@import '../mixins';
+
+.container {
+  /* stylelint-disable at-rule-no-unknown */
+  @include container;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid white;
+}
