@@ -66,9 +66,9 @@ const TodoItem = ({
         </div>
       ) : (
         <div>
-          <label htmlFor="checkbox" className="checkbox-container">
+          <label htmlFor={`checkbox-${todo.id}`} className="checkbox-container">
             <input
-              id="checkbox"
+              id={`checkbox-${todo.id}`}
               type="checkbox"
               checked={todo.completed}
               onChange={handleToggle}
