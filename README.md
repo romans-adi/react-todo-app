@@ -44,11 +44,11 @@ A React todo app is a task management application created using React, where use
 
 ### Key Features <a name="key-features"></a>
 
-[x] Create, edit, and delete tasks: Easily add new tasks, update existing ones, and remove completed or unnecessary items.
-[x] Mark tasks as completed: Keep track of your progress by checking off completed tasks.
-[x] User-friendly interface: Our app provides a simple and intuitive interface, making it easy to navigate and manage your to-do list.
-[x] Save your progress: Your tasks will be saved locally, allowing you to resume your work seamlessly.
-[x] Component-based architecture
+- [x] Create, edit, and delete tasks: Easily add new tasks, update existing ones, and remove completed or unnecessary items.
+- [x] Mark tasks as completed: Keep track of your progress by checking off completed tasks.
+- [x] User-friendly interface: Our app provides a simple and intuitive interface, making it easy to navigate and manage your to-do list.
+- [x] Save your progress: Your tasks will be saved locally, allowing you to resume your work seamlessly.
+- [x] Component-based architecture
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -56,9 +56,9 @@ A React todo app is a task management application created using React, where use
 
 ### Future Features <a name="future-features"></a>
 
-[] More styles
-[] Error Handling
-[] State-based behavior of elements
+- [ ] More styles
+- [ ] Error Handling
+- [ ] State-based behavior of elements
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
