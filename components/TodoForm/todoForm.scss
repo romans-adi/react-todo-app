@@ -1,8 +1,18 @@
-.submit-btn {
-  background: transparent;
-  color: #5b5b5b;
-  text-transform: capitalize;
-  cursor: pointer;
-  font-weight: 600;
-  margin-right: 10px;
+@import '../mixins';
+
+.todo-form {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  max-width: max-content;
+
+  .add-input {
+@include input;
+  }
+
+    .add-btn {
+      @include icon-btn;
+    }
+
 }

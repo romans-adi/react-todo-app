@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import './todoForm.scss'
+import './todoForm.scss';
+import { FaPlusCircle } from "react-icons/fa";
 
 function TodoForm({ addTodo }) {
   const [todoText, setTodoText] = useState('');
@@ -19,14 +20,15 @@ function TodoForm({ addTodo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='todo-form' onSubmit={handleSubmit}>
       <input
+      className='add-input'
         type="text"
         value={todoText}
         onChange={handleChange}
-        placeholder="Enter a new todo"
+        placeholder="Add todo..."
       />
-      <button className='submit-btn' type="submit">Add Todo</button>
+      <button className='add-btn' type="submit"><FaPlusCircle /></button>
     </form>
   );
 }
