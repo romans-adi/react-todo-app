@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 
@@ -42,8 +43,10 @@ const Navbar = () => {
           <Link className="navbar-link" to="/about">About</Link>
         </li>
         <li className="navbar-item">
-          <button className="navbar-button" onClick={toggleDropdown}>
-            Services <span>&#8595;</span>
+          <button className="navbar-button" type="button" onClick={toggleDropdown}>
+            Services
+            {' '}
+            <span>&#8595;</span>
           </button>
           {dropdown && (
             <ul className="dropdown-menu" ref={ref}>

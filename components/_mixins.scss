@@ -1,7 +1,8 @@
+/* stylelint-disable at-rule-no-unknown */
 @mixin input {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
   border: transparent;
   outline: none;
   border-radius: 4px;
@@ -31,6 +32,7 @@
   transition: background-color 0.3s ease;
   right: 3%;
   top: 25%;
+
   &:hover {
     transform: scale(1.2);
   }
@@ -46,7 +48,7 @@
   padding: 10%;
   border-radius: 8px;
   border-top: 2px solid rgba(255, 255, 255, 0.658);
-  box-shadow: 0px 23px 20px 23px rgba(50, 50, 50, 0.541);
+  box-shadow: 0 23px 20px 23px rgba(50, 50, 50, 0.541);
   background-color: seagreen;
   color: #fff;
 }

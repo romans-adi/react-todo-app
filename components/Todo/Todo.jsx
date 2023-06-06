@@ -5,9 +5,7 @@ import './todo.scss';
 
 function Todo() {
   const [todos, setTodos] = useState([
-    {id: 1,
-    text: 'Do something crazy',
-    completed: false,}
+    { id: 1, text: 'Do something crazy', completed: false },
   ]);
 
   useEffect(() => {
@@ -51,7 +49,13 @@ function Todo() {
     <div className="container">
       <h1>Todo List</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList classList="todo-list" todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} setTodos={setTodos}/>
+      <TodoList
+        classList="todo-list"
+        todos={todos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        setTodos={setTodos}
+      />
     </div>
   );
 }

@@ -1,8 +1,9 @@
 @import '../mixins';
 
 .container {
+  /* stylelint-disable at-rule-no-unknown */
   @include container;
-  }
+}
 
 .about,
 .design,
@@ -10,25 +11,17 @@
   h1,
   h2,
   h3 {
-  border-bottom: 1px solid white;
-}
-}
+    border-bottom: 1px solid white;
+  }
 
-.about,
-.design,
-.development {
   p {
-  font-size: 20px;
-  padding: 10px 0;
-  margin: 20px 0;
-}
-}
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
 
-.about,
-.design,
-.development {
   li {
-    box-shadow:  3px 5px 8px 4px #006638;
+    box-shadow: 3px 5px 8px 4px #006638;
     padding: 20px;
     border: transparent;
     border-radius: 8px;

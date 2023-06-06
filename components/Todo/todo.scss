@@ -1,7 +1,8 @@
 @import '../mixins';
 
 .container {
-@include container;
+  /* stylelint-disable at-rule-no-unknown */
+  @include container;
 }
 
 h1 {

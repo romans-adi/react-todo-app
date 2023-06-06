@@ -29,13 +29,13 @@
     grid-template-columns: 1fr auto auto;
 
     & button {
-        border: none;
-        background: none;
-        padding: 0;
-        cursor: pointer;
-        font-size: 1rem;
-        color: #fff;
-        margin-left: 8px;
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #fff;
+      margin-left: 8px;
     }
 
     &.completed {
@@ -75,17 +75,13 @@
   box-shadow: none;
 }
 
-.checkmark:after {
+.checkmark::after {
   content: '';
   position: absolute;
   display: none;
 }
 
-.checkbox-container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.checkbox-container .checkmark:after {
+.checkbox-container .checkmark::after {
   left: 7px;
   top: 3px;
   width: 5px;
@@ -95,12 +91,27 @@
   transform: rotate(45deg);
 }
 
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
 .edit-input {
+  /* stylelint-disable at-rule-no-unknown */
   @include input;
+
   width: 100%;
 }
 
-.save-btn, .cancel-btn {
+.save-btn {
+  right: 30px;
+}
+
+.cancel-btn {
+  right: 5px;
+}
+
+.save-btn,
+.cancel-btn {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -115,15 +126,8 @@
   color: seagreen;
   font-size: 18px;
   margin-left: 10px;
+
   &:hover {
     transform: scale(1.2);
   }
-}
-
-.save-btn {
-  right: 30px;
-}
-
-.cancel-btn {
-  right: 5px;
 }

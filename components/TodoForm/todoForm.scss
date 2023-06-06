@@ -8,11 +8,11 @@
   max-width: max-content;
 
   .add-input {
-@include input;
+    /* stylelint-disable at-rule-no-unknown */
+    @include input;
   }
 
-    .add-btn {
-      @include icon-btn;
-    }
-
+  .add-btn {
+    @include icon-btn;
+  }
 }
