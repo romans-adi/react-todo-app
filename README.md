@@ -35,6 +35,7 @@ A React todo app is a task management application created using React, where use
      <li><a href="https://react.dev/">React</a></li>
       <li><a href="https://www.javascript.com/">JavaScript</a></li>
       <li><a href="https://sass-lang.com/">SCSS</a></li>
+            <li><a href="https://vitejs.dev/">Vite.js</a></li>
   </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -44,7 +45,10 @@ A React todo app is a task management application created using React, where use
 ### Key Features <a name="key-features"></a>
 
 <ul>
-  <li>JSX syntax</li>
+  <li>Create, edit, and delete tasks: Easily add new tasks, update existing ones, and remove completed or unnecessary items.</li>
+<li>Mark tasks as completed: Keep track of your progress by checking off completed tasks.</li>
+<li>User-friendly interface: Our app provides a simple and intuitive interface, making it easy to navigate and manage your to-do list.</li>
+<li>Save your progress: Your tasks will be saved locally, allowing you to resume your work seamlessly.</li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
