@@ -5,7 +5,6 @@ import './todo.scss';
 
 function Todo() {
   const [todos, setTodos] = useState([
-    { id: 1, text: 'Do something crazy', completed: false },
   ]);
 
   useEffect(() => {
